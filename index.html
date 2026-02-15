@@ -166,7 +166,7 @@
         );
         padding: 40px 30px;
         border-radius: 8px;
-        max-width: 400px;
+        max-width: 500px;
         text-align: center;
         border: 1px solid rgba(255, 255, 255, 0.1);
         backdrop-filter: blur(5px);
@@ -182,8 +182,15 @@
       .modal-content p {
         font-size: 1.1rem;
         color: #e0e0e0;
-        margin: 15px 0;
+        margin-top: 15px;
         line-height: 1.6;
+      }
+
+      .modal-content .small{
+        font-size: small;
+        border: none;
+        text-align: center;
+        margin-top: -10px;
       }
 
       .close-btn {
@@ -217,6 +224,7 @@
         <div class="modal-content">
           <h2>Ошибка</h2>
           <p>Сайт перестал работать. Уходи отсюда.</p>
+          <p class="small">(Скоро будет обновление, 7 марта...)</p>
           <button class="close-btn" id="closeModal">Закрыть</button>
         </div>
       </div>
