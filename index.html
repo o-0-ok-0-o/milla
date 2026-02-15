@@ -1,54 +1,248 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <title>404 — Страница не найдена</title>
+  <head>
+    <meta charset="UTF-8" />
+    <title>404 — Ну и где?</title>
     <style>
-        body {
-            font-family: 'Georgia', serif;
-            background-color: #f5f5f5;
-            color: #333;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        height: 100%;
+        overflow: hidden;
+      }
+
+      body {
+        font-family: "JetBrains Mono", monospace, "Segoe UI", sans-serif;
+        background-color: #0a0a0a;
+        color: #eaeaea;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1.5;
+        letter-spacing: 0.5px;
+      }
+
+      .container {
+        background-color: #0a0a0a;
+        max-width: 550px;
+        width: 90%;
+        padding: 50px 40px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        backdrop-filter: blur(5px);
+        border-radius: 8px;
+      }
+
+      h1 {
+        font-size: 8rem;
+        font-weight: 700;
+        color: #ffffff;
+        margin: 0;
+        text-shadow:
+          0 0 3px #fff,
+          0 0 10px rgba(255, 255, 255, 0.3);
+        letter-spacing: -4px;
+      }
+
+      .subheading {
+        font-size: 1.3rem;
+        color: rgba(255, 255, 255, 0.6);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin: -10px 0 20px;
+        word-spacing: 3px;
+      }
+
+      p {
+        font-size: 1.1rem;
+        color: rgba(255, 255, 255, 0.85);
+        margin: 10px 0;
+        max-width: 450px;
+        text-align: left;
+        padding-left: 15px;
+        border-left: 2px solid rgba(255, 255, 255, 0.1);
+      }
+
+      a {
+        display: inline-block;
+        padding: 14px 32px;
+        background: transparent;
+        color: #00ffff;
+        text-decoration: none;
+        border: 1px solid #00ffff;
+        border-radius: 4px;
+        font-weight: 600;
+        font-size: 1rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(2px);
+      }
+
+      a:hover {
+        background: rgba(0, 255, 255, 0.1);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(0, 255, 255, 0.2);
+      }
+
+      /* Адаптивность */
+      @media (max-height: 500px) {
+        .container {
+          padding: 30px 20px;
+          gap: 20px;
         }
-        /* .container {
-            max-width: 500px;
-            padding: 20px;
-            background-color: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        } */
         h1 {
-            font-size: 6rem;
-            margin: 0 0 10px 0;
-            color: #666;
+          font-size: 6rem;
+        }
+        .subheading {
+          font-size: 1.1rem;
         }
         p {
-            font-size: 1.3rem;
-            line-height: 1.6;
-            margin: 10px 0;
+          font-size: 1rem;
+          padding-left: 10px;
         }
         a {
-            color: #007bff;
-            text-decoration: none;
-            font-weight: 500;
+          padding: 12px 24px;
+          font-size: 0.9rem;
         }
-        a:hover {
-            text-decoration: underline;
+      }
+
+      @media (max-width: 480px) {
+        .container {
+          padding: 30px 15px;
         }
+        h1 {
+          font-size: 5.5rem;
+        }
+        .subheading {
+          font-size: 1.1rem;
+          letter-spacing: 1px;
+        }
+        p {
+          text-align: center;
+          padding-left: 0;
+          border-left: none;
+        }
+        a {
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+      /* Модальное окно */
+      .modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+      }
+
+      .modal.active {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .modal-content {
+        background: radial-gradient(
+          circle at center,
+          rgba(40, 40, 40, 0.9),
+          rgba(20, 20, 20, 0.99)
+        );
+        padding: 40px 30px;
+        border-radius: 8px;
+        max-width: 400px;
+        text-align: center;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(5px);
+      }
+
+      .modal-content h2 {
+        font-size: 2.2rem;
+        color: #ff5252;
+        margin-bottom: 20px;
+        text-shadow: 0 0 5px rgba(255, 82, 82, 0.4);
+      }
+
+      .modal-content p {
+        font-size: 1.1rem;
+        color: #e0e0e0;
+        margin: 15px 0;
+        line-height: 1.6;
+      }
+
+      .close-btn {
+        margin-top: 25px;
+        padding: 12px 24px;
+        background: #333;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: background 0.3s;
+      }
+
+      .close-btn:hover {
+        background: #555;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <h1>404</h1>
-        <p>Тишина…</p>
-        <p>Здесь ничего нет. Совсем.</p>
+      <h1>404</h1>
+      <div class="subheading">страница не найдена</div>
+      <p>Ты куда полез? Здесь ничего нет.</p>
+      <p>Либо адрес кривой, либо страницы давно снесли. Разбирайся сам.</p>
+      <p>Если очень надо — иди на главную, там хоть что‑то работает.</p>
+      <a href="#">на главную</a>
+      
     </div>
-</body>
+    <div class="modal" id="errorModal">
+        <div class="modal-content">
+          <h2>Ошибка</h2>
+          <p>Сайт перестал работать. Уходи отсюда.</p>
+          <button class="close-btn" id="closeModal">Закрыть</button>
+        </div>
+      </div>
+    <script>
+      // Получаем элементы
+      const modal = document.getElementById("errorModal");
+      const closeBtn = document.getElementById("closeModal");
+      const mainLink = document.querySelector('a[href="#"]');
+
+      // Открываем модальное окно при клике на "на главную"
+      mainLink.addEventListener("click", function (e) {
+        e.preventDefault(); // Отменяем переход
+        modal.classList.add("active");
+      });
+
+      // Закрываем модальное окно по кнопке
+      closeBtn.addEventListener("click", function () {
+        modal.classList.remove("active");
+      });
+
+      // Также закрываем по Esc
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          modal.classList.remove("active");
+        }
+      });
+    </script>
+  </body>
 </html>
