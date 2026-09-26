@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Глава V · Лунный оракул</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Marck+Script&family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <canvas id="sky"></canvas>
+    <div id="nebula"></div>
+    <canvas id="trail"></canvas>
+
+    <nav class="book-nav" id="book-nav">
+        <span class="nav-title">✦ Книга Тамиллы</span>
+        <div class="nav-links" id="nav-links">
+            <a href="index.html">Пролог</a>
+            <a href="candles.html">Свечи</a>
+            <a href="runes.html">Руны</a>
+            <a href="moon.html" class="active">Луна</a>
+            <a href="garden.html">Сад</a>
+            <a href="crystal.html">Шар</a>
+            <a href="letters.html">Письма</a>
+            <a href="mirror.html">Зеркало</a>
+            <a href="spells.html">Заклинания</a>
+            <a href="finale.html">Финал</a>
+        </div>
+        <button class="nav-burger" id="nav-burger">☰</button>
+    </nav>
+
+    <section class="chapter page-head">
+        <div class="chapter-num">Глава V</div>
+        <h1 class="chapter-title">Лунный оракул</h1>
+        <p class="chapter-lead reveal">Луна помнит каждый твой день — даже те, что ты сама забыла.<br>
+        Спроси у неё — она ответит шёпотом.</p>
+    </section>
+
+    <section class="chapter">
+        <div class="oracle-box reveal">
+            <div class="oracle-moon" id="oracle-moon">☾</div>
+            <div class="oracle-text">
+                <p class="oracle-phase" id="oracle-phase"></p>
+                <p class="oracle-prediction script" id="oracle-prediction"></p>
+            </div>
+            <button class="rune-btn" id="oracle-btn">Спросить луну ещё раз</button>
+        </div>
+    </section>
+
+    <section class="chapter">
+        <h2 class="chapter-title">Лунный календарь твоей силы</h2>
+        <p class="chapter-lead reveal">Что луна советует тебе в каждый из своих дней:</p>
+        <div class="moon-calendar reveal" id="moon-calendar"></div>
+    </section>
+
+    <section class="chapter">
+        <h2 class="chapter-title">Лунная молитва для неё</h2>
+        <div class="flower-poem reveal">
+            <p>Луна, что светишь сквозь мои окна,<br>
+            пошли ей сон из облаков и мёда,<br>
+            пошли ей утро мягче пуха одуванчика,<br>
+            и пусть её дорога будет выстлана светом.</p>
+            <p style="margin-top:1em">А если она устанет — пусть вспомнит:<br>
+            даже ты, луна, иногда бываешь тонким серпом,<br>
+            но всё равно остаёшься луной.</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p class="script footer-script">луна на твоей стороне — всегда</p>
+        <p><a href="garden.html" class="footer-next">Перейти к Главе VI · Полночный сад →</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

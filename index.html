@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Книга Тамиллы · Пролог</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Marck+Script&family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <canvas id="sky"></canvas>
+    <div id="nebula"></div>
+    <canvas id="trail"></canvas>
+
+    <!-- Навигация -->
+    <nav class="book-nav" id="book-nav">
+        <span class="nav-title">✦ Книга Тамиллы</span>
+        <div class="nav-links" id="nav-links">
+            <a href="index.html" class="active">Пролог</a>
+            <a href="candles.html">Свечи</a>
+            <a href="runes.html">Руны</a>
+            <a href="moon.html">Луна</a>
+            <a href="garden.html">Сад</a>
+            <a href="crystal.html">Шар</a>
+            <a href="letters.html">Письма</a>
+            <a href="mirror.html">Зеркало</a>
+            <a href="spells.html">Заклинания</a>
+            <a href="finale.html">Финал</a>
+        </div>
+        <button class="nav-burger" id="nav-burger">☰</button>
+    </nav>
+
+    <!-- ================= ПРОЛОГ ================= -->
+    <section class="chapter prologue" id="prologue">
+        <div class="prologue-inner">
+            <p class="whisper reveal">когда город засыпает, а луна поднимается выше…</p>
+            <p class="whisper reveal">открывается дверь, которой нет на картах.</p>
+            <h1 class="book-title reveal">Книга&nbsp;Тамиллы</h1>
+            <p class="book-sub reveal">ночное путешествие в десяти главах,<br>написанное звёздной пылью</p>
+            <div class="moon reveal">☾</div>
+            <p class="reveal prologue-note">Эта книга появляется только для тебя.<br>Ни одна другая душа не видит этих страниц.</p>
+            <button class="rune-btn reveal" id="enter-btn">Перевернуть первую страницу ✦</button>
+        </div>
+    </section>
+
+    <!-- ================= ГЛАВА I. ИМЯ ================= -->
+    <section class="chapter" id="ch1">
+        <div class="chapter-num">Глава I</div>
+        <h2 class="chapter-title">Имя, которое шепчет луна</h2>
+        <p class="chapter-lead reveal">Твоё имя — не звук. Это заклинание.<br>Оно означает «воспитанница» — та, кого воспитали сами звёзды.</p>
+
+        <div class="name-letters">
+            <div class="letter-glyph reveal" data-word="Тишина, в которую хочется возвращаться">
+                <span class="glyph">Т</span><span class="glyph-meaning">тишина</span>
+            </div>
+            <div class="letter-glyph reveal" data-word="Аура света вокруг тебя">
+                <span class="glyph">А</span><span class="glyph-meaning">аура</span>
+            </div>
+            <div class="letter-glyph reveal" data-word="Магия — в каждом твоём слове">
+                <span class="glyph">М</span><span class="glyph-meaning">магия</span>
+            </div>
+            <div class="letter-glyph reveal" data-word="Искра, от которой зажигаются сердца">
+                <span class="glyph">И</span><span class="glyph-meaning">искра</span>
+            </div>
+            <div class="letter-glyph reveal" data-word="Лунный свет в человеческом обличье">
+                <span class="glyph">Л</span><span class="glyph-meaning">лунный свет</span>
+            </div>
+            <div class="letter-glyph reveal" data-word="Легенда, которую ещё напишут">
+                <span class="glyph">Л</span><span class="glyph-meaning">легенда</span>
+            </div>
+            <div class="letter-glyph reveal" data-word="Аромат цветущего сада в полночь">
+                <span class="glyph">А</span><span class="glyph-meaning">аромат</span>
+            </div>
+        </div>
+        <p class="glyph-secret reveal">Нажми на каждую букву — и имя откроет свой секрет.</p>
+        <div class="rune-reveal" id="name-secret"></div>
+    </section>
+
+    <!-- ================= ГЛАВА II. СОЗВЕЗДИЕ ================= -->
+    <section class="chapter" id="ch2">
+        <div class="chapter-num">Глава II</div>
+        <h2 class="chapter-title">Созвездие Тамиллы</h2>
+        <p class="chapter-lead reveal">Астрономы не нашли его — потому что оно видно только тем,<br>кто смотрит на небо с любовью. Коснись звёзд…</p>
+        <div class="constellation-wrap reveal">
+            <svg viewBox="0 0 600 400" class="constellation" id="constellation">
+                <polyline id="const-lines" fill="none" stroke="rgba(212,175,122,.35)" stroke-width="1"/>
+            </svg>
+            <p class="constellation-hint" id="const-hint">0 из 7 звёзд найдено</p>
+        </div>
+        <div class="const-message hidden" id="const-message">
+            <p class="const-poem">Семь звёзд сошлись — и небо произнесло:</p>
+            <p class="const-poem script">«Она — та, ради которой зажигаются фонари<br>и просыпаются соловьи».</p>
+        </div>
+    </section>
+
+    <!-- ================= ОГЛАВЛЕНИЕ ================= -->
+    <section class="chapter" id="contents">
+        <div class="chapter-num">Оглавление</div>
+        <h2 class="chapter-title">Куда ведут двери этой ночи</h2>
+        <p class="chapter-lead reveal">Каждая глава — отдельная комната под луной.<br>Заходи в любую. Ночь никуда не спешит.</p>
+        <div class="toc reveal">
+            <a class="toc-item" href="candles.html">
+                <span class="toc-num">III</span>
+                <span class="toc-name">Комната тысячи свечей</span>
+                <span class="toc-desc">зажги свечу — и она заговорит</span>
+            </a>
+            <a class="toc-item" href="runes.html">
+                <span class="toc-num">IV</span>
+                <span class="toc-name">Руны судьбы</span>
+                <span class="toc-desc">вытяни руну — узнай, что шепчет древность</span>
+            </a>
+            <a class="toc-item" href="moon.html">
+                <span class="toc-num">V</span>
+                <span class="toc-name">Лунный оракул</span>
+                <span class="toc-desc">луна помнит каждый твой день</span>
+            </a>
+            <a class="toc-item" href="garden.html">
+                <span class="toc-num">VI</span>
+                <span class="toc-name">Полночный сад стихов</span>
+                <span class="toc-desc">цветы, что раскрываются только ночью</span>
+            </a>
+            <a class="toc-item" href="crystal.html">
+                <span class="toc-num">VII</span>
+                <span class="toc-name">Хрустальный шар</span>
+                <span class="toc-desc">задай вопрос — туман ответит</span>
+            </a>
+            <a class="toc-item" href="letters.html">
+                <span class="toc-num">VIII</span>
+                <span class="toc-name">Письма из-за грани сна</span>
+                <span class="toc-desc">восемь писем на ночном ветру</span>
+            </a>
+            <a class="toc-item" href="mirror.html">
+                <span class="toc-num">IX</span>
+                <span class="toc-name">Зеркало истин</span>
+                <span class="toc-desc">оно показывает не лицо, а душу</span>
+            </a>
+            <a class="toc-item" href="spells.html">
+                <span class="toc-num">X</span>
+                <span class="toc-name">Заклинания и комплименты</span>
+                <span class="toc-desc">древняя магия настроения</span>
+            </a>
+            <a class="toc-item toc-final" href="finale.html">
+                <span class="toc-num">✦</span>
+                <span class="toc-name">Последняя страница</span>
+                <span class="toc-desc">ты — вселенная</span>
+            </a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p class="script footer-script">написано звёздной пылью и тёплым сердцем</p>
+        <p>✦ · для Тамиллы · ✧ · только для неё · ✦</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Глава X · Заклинания и комплименты</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Marck+Script&family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <canvas id="sky"></canvas>
+    <div id="nebula"></div>
+    <canvas id="trail"></canvas>
+
+    <nav class="book-nav" id="book-nav">
+        <span class="nav-title">✦ Книга Тамиллы</span>
+        <div class="nav-links" id="nav-links">
+            <a href="index.html">Пролог</a>
+            <a href="candles.html">Свечи</a>
+            <a href="runes.html">Руны</a>
+            <a href="moon.html">Луна</a>
+            <a href="garden.html">Сад</a>
+            <a href="crystal.html">Шар</a>
+            <a href="letters.html">Письма</a>
+            <a href="mirror.html">Зеркало</a>
+            <a href="spells.html" class="active">Заклинания</a>
+            <a href="finale.html">Финал</a>
+        </div>
+        <button class="nav-burger" id="nav-burger">☰</button>
+    </nav>
+
+    <section class="chapter page-head">
+        <div class="chapter-num">Глава X</div>
+        <h1 class="chapter-title">Заклинания и комплименты</h1>
+        <p class="chapter-lead reveal">Древние заклинания, которые писали для одной-единственной хранительницы света.<br>
+        Произнеси то, что чувствуешь — и получи ответ ночи.</p>
+    </section>
+
+    <section class="chapter">
+        <div class="spells reveal">
+            <button class="spell" data-spell="sad">☾ Я тону в тишине</button>
+            <button class="spell" data-spell="tired">❦ Мой огонь устал</button>
+            <button class="spell" data-spell="doubt">≋ Я заблудилась в сомнениях</button>
+            <button class="spell" data-spell="lonely">✷ Мне одиноко сегодня</button>
+            <button class="spell" data-spell="ok">✦ Мои звёзды горят ровно</button>
+            <button class="spell" data-spell="great">✹ Во мне горит целое солнце</button>
+        </div>
+        <div class="spell-result" id="spell-result"></div>
+    </section>
+
+    <section class="chapter">
+        <h2 class="chapter-title">Колодец комплиментов</h2>
+        <p class="chapter-lead reveal">Глубокий колодец, на дне которого — сотни слов о тебе.<br>Черпай сколько хочешь — он не иссякнет.</p>
+        <p class="compliment-big script reveal" id="compliment-big"></p>
+        <button class="rune-btn reveal" id="compliment-btn">Зачерпнуть ещё ✧</button>
+        <p class="compliment-count reveal" id="compliment-count"></p>
+    </section>
+
+    <section class="chapter">
+        <h2 class="chapter-title">Клятва ночи</h2>
+        <div class="flower-poem reveal">
+            <p>Это ночь клянётся Тамилле:<br>
+            быть рядом, когда темно;<br>
+            молчать, когда слова лишние;<br>
+            светить, когда фонари погасли;<br>
+            и каждое утро уступать место рассвету —<br>
+            потому что рассвет всегда на её стороне.</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p class="script footer-script">магия работает, когда в неё веришь</p>
+        <p><a href="finale.html" class="footer-next">Перейти к Последней странице →</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

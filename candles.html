@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Глава III · Комната тысячи свечей</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Marck+Script&family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <canvas id="sky"></canvas>
+    <div id="nebula"></div>
+    <canvas id="trail"></canvas>
+
+    <nav class="book-nav" id="book-nav">
+        <span class="nav-title">✦ Книга Тамиллы</span>
+        <div class="nav-links" id="nav-links">
+            <a href="index.html">Пролог</a>
+            <a href="candles.html" class="active">Свечи</a>
+            <a href="runes.html">Руны</a>
+            <a href="moon.html">Луна</a>
+            <a href="garden.html">Сад</a>
+            <a href="crystal.html">Шар</a>
+            <a href="letters.html">Письма</a>
+            <a href="mirror.html">Зеркало</a>
+            <a href="spells.html">Заклинания</a>
+            <a href="finale.html">Финал</a>
+        </div>
+        <button class="nav-burger" id="nav-burger">☰</button>
+    </nav>
+
+    <section class="chapter page-head">
+        <div class="chapter-num">Глава III</div>
+        <h1 class="chapter-title">Комната тысячи свечей</h1>
+        <p class="chapter-lead reveal">В этой комнате нет окон — только свечи.<br>
+        Каждая зажжена в чью-то честь. Одна из них — твоя.<br>
+        Коснись холодного воска — и пламя вспомнит, ради кого оно горит.</p>
+        <p class="candles-progress reveal" id="candles-progress">Зажжено 0 из 12 свечей</p>
+    </section>
+
+    <section class="chapter">
+        <div class="candles-room reveal" id="candles-room"></div>
+        <div class="candle-speech" id="candle-speech"></div>
+    </section>
+
+    <section class="chapter">
+        <h2 class="chapter-title">Свеча твоего желания</h2>
+        <p class="chapter-lead reveal">Последняя свеча в комнате — без имени.<br>Ты зажигаешь её сама. Напиши, ради чего она будет гореть.</p>
+        <div class="own-candle reveal">
+            <div class="own-candle-flame" id="own-flame">❦</div>
+            <input class="crystal-input" id="own-candle-input" type="text" maxlength="100" placeholder="ради чего горит твоя свеча…">
+            <button class="rune-btn" id="own-candle-btn">Зажечь свою свечу ✦</button>
+            <p class="own-candle-result script" id="own-candle-result"></p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p class="script footer-script">пусть твоя свеча горит ярче всех</p>
+        <p><a href="runes.html" class="footer-next">Перейти к Главе IV · Руны судьбы →</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

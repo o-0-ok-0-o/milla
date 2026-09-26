@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Глава IV · Руны судьбы</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Marck+Script&family=Montserrat:wght@200;300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <canvas id="sky"></canvas>
+    <div id="nebula"></div>
+    <canvas id="trail"></canvas>
+
+    <nav class="book-nav" id="book-nav">
+        <span class="nav-title">✦ Книга Тамиллы</span>
+        <div class="nav-links" id="nav-links">
+            <a href="index.html">Пролог</a>
+            <a href="candles.html">Свечи</a>
+            <a href="runes.html" class="active">Руны</a>
+            <a href="moon.html">Луна</a>
+            <a href="garden.html">Сад</a>
+            <a href="crystal.html">Шар</a>
+            <a href="letters.html">Письма</a>
+            <a href="mirror.html">Зеркало</a>
+            <a href="spells.html">Заклинания</a>
+            <a href="finale.html">Финал</a>
+        </div>
+        <button class="nav-burger" id="nav-burger">☰</button>
+    </nav>
+
+    <section class="chapter page-head">
+        <div class="chapter-num">Глава IV</div>
+        <h1 class="chapter-title">Руны судьбы</h1>
+        <p class="chapter-lead reveal">В мешочке из полночного бархата — двенадцать рун.<br>
+        Старше языков, старше имён. Они знают тебя дольше, чем ты себя помнишь.<br>
+        Протяни руку и вытяни одну.</p>
+    </section>
+
+    <section class="chapter">
+        <div class="rune-pouch reveal" id="rune-pouch">
+            <div class="pouch-emoji">✧</div>
+            <p class="pouch-hint">коснись мешочка — руна сама ляжет в ладонь</p>
+        </div>
+        <div class="rune-drawn hidden" id="rune-drawn">
+            <div class="rune-symbol" id="rune-symbol"></div>
+            <p class="rune-name" id="rune-name"></p>
+            <p class="rune-text" id="rune-text"></p>
+            <button class="rune-btn" id="rune-again">Вытянуть ещё руну ✧</button>
+        </div>
+    </section>
+
+    <section class="chapter">
+        <h2 class="chapter-title">Руны дня</h2>
+        <p class="chapter-lead reveal">Три руны, которые ночь положила тебе на сегодня: на утро, на день и на вечер.</p>
+        <div class="day-runes reveal" id="day-runes"></div>
+    </section>
+
+    <footer class="footer">
+        <p class="script footer-script">руны не лгут тем, кто верит</p>
+        <p><a href="moon.html" class="footer-next">Перейти к Главе V · Лунный оракул →</a></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
